@@ -32,3 +32,16 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         inputField.value = output;
     }
 });
+
+function verifyPin(){
+    const generatePin = document.getElementById('output-pin').value;
+    const typedPin = document.getElementById('display-input').value;
+    if(generatePin == typedPin){
+        document.getElementById('matched-warning').style.display = 'block';
+        document.getElementById('mismatch-warning').style.display = 'none';
+    }
+    else{
+        document.getElementById('matched-warning').style.display = 'none';
+        document.getElementById('mismatch-warning').style.display = 'block';
+    }
+}
